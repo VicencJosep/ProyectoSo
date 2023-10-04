@@ -37,6 +37,10 @@ int main(int argc, char *argv)
     strcpy (consulta,"SELECT Partidas.Dificultad FROM Partidas,Relaciones,Jugadores WHERE Relaciones.Data = 'Martes'AND Jugdores.Name ='Alicia' AND Jugadores.Name ='Juan' AND Jugadores.ID= Relaciones.ID_J  ");
 
 
+	char consulta[80]
+    	strcpy( consulta, "SELECT Kills FROM Relaciones,Jugadores,Partidas WHERE Relaciones.Dificultad=”1” AND Relaciones.ID = Jugadores.ID AND Partidas.Dificultad= “Dificil”);
+
+
     err=mysql_query (conn, consulta);
     if (err!=0) {
         printf ("Error al consultar datos de la base %u %s\n",
