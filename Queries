@@ -27,18 +27,62 @@ int main(int argc, char *argv)
         exit (1);
     }
 //empiezan las queries
-
-    
-	char consulta [80];
-	strcpy (consulta,"SELECT Partida.ID FROM Partidas WHERE Partidas.Entorno = 'Bosque'");
-	
-	
+    char nom1[100];
+    char nom2[100];
+    char entorno[100];
     char consulta [80];
-    strcpy (consulta,"SELECT Partidas.Dificultad FROM Partidas,Relaciones,Jugadores WHERE Relaciones.Data = 'Martes'AND Jugdores.Name ='Alicia' AND Jugadores.Name ='Juan' AND Jugadores.ID= Relaciones.ID_J  ");
+    char query[1000];
+    char consulta [1000];
+    sprintf(&consulta,"SELECT Partida.ID FROM Partida WHERE Partida.Entorno = %s;", entorno);
+     err=mysql_query (conn, consulta);
+    if (err!=0) {
+        printf ("Error al consultar datos de la base %u %s\n",
+                mysql_errno(conn), mysql_error(conn));
+        exit (1);
+    }
 
+    row = mysql_fetch_row (resultado);
 
-	char consulta[80]
-    	strcpy( consulta, "SELECT Kills FROM Relaciones,Jugadores,Partidas WHERE Relaciones.Dificultad=”1” AND Relaciones.ID = Jugadores.ID AND Partidas.Dificultad= “Dificil”);
+    if (row == NULL)
+        printf ("No se han obtenido datos en la consulta\n");
+    else
+        while (row !=NULL) {
+            // la columna 0 contiene el nombre del jugador
+            printf ("%s\n", row[0]);
+            // obtenemos la siguiente fila
+            row = mysql_fetch_row (resultado);
+    }
+    char fecha[80];
+    sscanf (consulta,"SELECT Partida.Dificultad FROM Partida,Relaciones,Jugador WHERE 
+Jugdor.Nombre = %s AND 
+Jugador.ID = Relaciones.ID_Jugador AND 
+Relaciones.ID_Partida = Partida.ID AND
+Partida.Fecha = %s AND
+Partida.Dificultad IN(SELECT Partida.ID FROM Partidas,Relaciones,Jugadores
+Jugador.Nombre = %s AND
+Jugador.ID = Relaciones.ID_Jugador AND
+Relaciones.ID_Partida = Partida.ID AND
+Partida.Fecha = %s);", nom1, fecha, nom2, fecha);
+         err=mysql_query (conn, consulta);
+    if (err!=0) {
+        printf ("Error al consultar datos de la base %u %s\n",
+                mysql_errno(conn), mysql_error(conn));
+        exit (1);
+    }
+
+    row = mysql_fetch_row (resultado);
+
+    if (row == NULL)
+        printf ("No se han obtenido datos en la consulta\n");
+    else
+        while (row !=NULL) {
+            // la columna 0 contiene el nombre del jugador
+            printf ("%s\n", row[0]);
+            // obtenemos la siguiente fila
+            row = mysql_fetch_row (resultado);
+    }
+    int dificultad;
+    sscanf( consulta, "SELECT Kills FROM Relaciones,Partida WHERE Relaciones.Dificultad=%d AND Relaciones.ID = Jugadores.ID;", dificultad);
 
 
     err=mysql_query (conn, consulta);
