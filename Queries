@@ -28,6 +28,11 @@ int main(int argc, char *argv)
     }
 //empiezan las queries
 
+    
+	char consulta [80];
+	strcpy (consulta,"SELECT Partida.ID FROM Partidas WHERE Partidas.Entorno = 'Bosque'");
+	
+	
     char consulta [80];
     strcpy (consulta,"SELECT Partidas.Dificultad FROM Partidas,Relaciones,Jugadores WHERE Relaciones.Data = 'Martes'AND Jugdores.Name ='Alicia' AND Jugadores.Name ='Juan' AND Jugadores.ID= Relaciones.ID_J  ");
 
