@@ -5,3 +5,4 @@ GRUPO FOSSA VERSIÓN 3
 Versión generada por Vicenç Peñalver
 Versión verificada por Hugo Vargas
 Comunicadora Alicia Carmona
+Enlace del video https://youtu.be/KxPOd1NIQPU
