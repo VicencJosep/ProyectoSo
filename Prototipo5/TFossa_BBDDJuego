@@ -1,0 +1,33 @@
+DROP DATABASE IF EXISTS TFossa_BBDDJuego;
+CREATE DATABASE TFossa_BBDDJuego;
+USE TFossa_BBDDJuego;
+CREATE TABLE Jugador(
+    ID INTEGER PRIMARY KEY NOT NULL,
+    Username TEXT NOT NULL,
+    Password TEXT NOT NULL
+    )ENGINE = InnoDB;
+CREATE TABLE Partida(
+    ID INTEGER PRIMARY KEY NOT NULL,
+    Dificultad INTEGER NOT NULL,
+    Entorno TEXT NOT NULL,
+    FECHA TEXT NOT NULL,
+    Ganador TEXT NOT NULL
+    )ENGINE = InnoDB;
+CREATE TABLE Relaciones(                                                    
+    ID INTEGER PRIMARY KEY NOT NULL,
+    ID_Partida INTEGER NOT NULL,
+    ID_Jugador INTEGER NOT NULL,
+    FOREIGN KEY (ID_Jugador) REFERENCES Jugador(ID),                          
+    FOREIGN KEY (ID_Partida) REFERENCES Partida(ID),                          
+    Kills INTEGER NOT NULL
+    )ENGINE = InnoDB;
+INSERT INTO  Jugador VALUES(1, 'Alicia', '1234');
+INSERT INTO  Jugador VALUES(2, 'Hugo', '1234');
+INSERT INTO  Jugador VALUES(3, 'VicenÃ§', '1234');
+INSERT INTO Partida VALUES(1, 2, 'Claro', '11111', 'Alicia');
+INSERT INTO Partida VALUES(2, 1, 'Oscuro', '11111','Alicia');
+INSERT INTO Partida VALUES(3, 3, 'Claro', '112321', 'Hugo');
+INSERT INTO Partida VALUES(4, 2, 'Claro', '11111', 'Hugo');
+INSERT INTO Relaciones VALUES(1, 2, 1, 3);
+INSERT INTO Relaciones VALUES(2, 2, 2, 2);
+INSERT INTO Relaciones VALUES(3, 1, 3, 4);
