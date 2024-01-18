@@ -1,0 +1,14 @@
+C:\Users\Usuario\Desktop\FOSSA_DamasGame\FOSSA_DamasGame\bin\Debug\FOSSA_DamasGame.exe.config
+C:\Users\Usuario\Desktop\FOSSA_DamasGame\FOSSA_DamasGame\bin\Debug\FOSSA_DamasGame.exe
+C:\Users\Usuario\Desktop\FOSSA_DamasGame\FOSSA_DamasGame\bin\Debug\FOSSA_DamasGame.pdb
+C:\Users\Usuario\Desktop\FOSSA_DamasGame\FOSSA_DamasGame\obj\Debug\FOSSA_DamasGame.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\FOSSA_DamasGame\FOSSA_DamasGame\obj\Debug\FOSSA_DamasGame.csproj.SuggestedBindingRedirects.cache
+C:\Users\Usuario\Desktop\FOSSA_DamasGame\FOSSA_DamasGame\obj\Debug\FOSSA_DamasGame.FormFichasBlancas.resources
+C:\Users\Usuario\Desktop\FOSSA_DamasGame\FOSSA_DamasGame\obj\Debug\FOSSA_DamasGame.FormFichasNegras.resources
+C:\Users\Usuario\Desktop\FOSSA_DamasGame\FOSSA_DamasGame\obj\Debug\FOSSA_DamasGame.FormPrincipal.resources
+C:\Users\Usuario\Desktop\FOSSA_DamasGame\FOSSA_DamasGame\obj\Debug\FOSSA_DamasGame.Properties.Resources.resources
+C:\Users\Usuario\Desktop\FOSSA_DamasGame\FOSSA_DamasGame\obj\Debug\FOSSA_DamasGame.csproj.GenerateResource.cache
+C:\Users\Usuario\Desktop\FOSSA_DamasGame\FOSSA_DamasGame\obj\Debug\FOSSA_DamasGame.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\FOSSA_DamasGame\FOSSA_DamasGame\obj\Debug\FOSSA_DamasGame.exe
+C:\Users\Usuario\Desktop\FOSSA_DamasGame\FOSSA_DamasGame\obj\Debug\FOSSA_DamasGame.pdb
+C:\Users\Usuario\Desktop\FOSSA_DamasGame\FOSSA_DamasGame\obj\Debug\FOSSA_DamasGame.ConsultasForm.resources
